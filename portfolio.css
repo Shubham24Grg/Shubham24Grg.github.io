@@ -1,0 +1,674 @@
+ :root{
+	font-size: 16px;
+}
+ body {
+	
+	margin: 0;
+	padding: 0;
+}
+.container{
+	display: flex;
+	flex-direction: column;
+	background-color: #a2bf9e;
+}
+.header {
+	z-index: 3;
+	position: fixed;
+	width:100%;
+	background-color: #194c47;
+	color: #c7dbd9;
+}
+
+.navbar-container {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+}
+
+.navbar-title h2 {
+	font-family: "Playfair Display", serif;
+	font-size: 1.3rem;
+}
+
+ .navbar-logo {
+	display: none;
+}
+
+ .nav {
+	flex:1;
+	display: flex;
+	justify-content: flex-end;
+	flex-wrap: nowrap;
+	align-items: center;
+	list-style: none;
+	color: #c7dbd9;
+	
+}
+
+
+.nav a:hover {
+	background-color:#c7dbd9;
+	color: #4d4f48; 
+}
+
+li {
+  border-right: 1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+.nav  a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	padding: 5px 5px;
+	font-size: 0.9rem;
+	color: #c7dbd9;
+	text-transform: uppercase;
+	font-family: "Istok Web", sans-serif;
+}
+
+.personal-info{
+	padding-top: 5vw;
+}
+
+.personal-info-container{
+	flex:1;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 2vw 2vw 2vw;
+	background-color:#24344f;
+	padding: 5vw;
+}
+
+.profile-image{
+	display: flex;
+	align-items: center;
+	width: 50%;
+}
+
+.my-profile-image{
+   margin-left: 5vw; 
+   border-radius: 50%;
+   border: 1px solid #1a2d4c;
+   box-shadow: 0px 0px 20px #35eea4;
+}
+
+.profile-description{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 50%
+}
+
+.heading-1{
+	color: #b8bec6;
+	font-family: "Playfair display", serif;
+	font-size: 2rem;
+	font-weight: 800;
+	text-align: center;
+}
+
+.heading-2{
+	color: #b8bec6;
+	font-family: "Playfair display", serif;
+	font-size: 1.2rem;
+	font-weight: 700;
+	padding: 0.2vw;
+	text-align: center; 
+}
+
+.paragraph-1{
+	color: #c7dbd9;
+	font-family: "Istok Web",sans-serif;
+	font-size: 0.9rem;
+	margin-top: 2vw;
+	text-align: justify;
+}
+
+.interest-area{
+	margin:0;
+}
+
+.interest-area-container{
+	margin: 2vw 2vw ;
+	display: flex;
+	flex-direction: column;
+}
+
+.interest-area-title{
+	text-align: center;
+	background-color: #24344f;
+	font-size: 1.5rem;
+	font-family: "Playfair display", serif;
+	color: #c7dbd9;
+	letter-spacing: 6px;
+}
+
+.interests{
+	padding: 0 5vw;
+	margin: 5vw 0 1vw;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.interestName{
+	text-align: center;
+	color: #24344f;
+	font-size: 1.5rem;
+	font-family: "Istok Web", sans-serif;
+}
+
+.image{
+	width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid #0e4f41;
+    box-shadow: 0px 0px 40px #0f332b;
+}
+
+.experience-area{
+	margin:0;
+}
+
+.experience-container{
+	margin: 2vw 2vw ;
+	display: flex;
+	flex-direction: column;
+}
+
+.experience-title{
+	text-align: center;
+	background-color: #24344f;
+	font-size: 1.5rem;
+	font-family: "Playfair display", serif;
+	color: #c7dbd9;
+	letter-spacing: 6px;
+}
+
+.internships{
+	display: flex;
+	flex-direction: column;
+}
+.internship-1{
+	margin: 5vw 7vw 0;
+	padding:2vw;
+	background-color: #16cc89;
+	border-radius: 15px;
+	box-shadow: 0px 3px 20px 5px #1a1c1b;
+	display: flex;
+	flex-wrap: wrap;
+	height: auto;
+	align-items: center;
+}
+.internship-2{
+	margin: 2vw 7vw 5vw;
+	padding:2vw;
+	background-color: #16cc89;
+	border-radius: 15px;
+	box-shadow: 0px 3px 20px 2px #1a1c1b;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	height: auto;
+	align-items: center;
+}
+.organization-logo{
+	width:30%;
+}
+
+/* Add animation (Chrome, Safari, Opera) */
+@-webkit-keyframes example {
+  from {top:-100px;opacity: 0;}
+  to {top:0px;opacity:1;}
+}
+
+/* Add animation (Standard syntax) */
+@keyframes example {
+  from {top:-100px;opacity: 0;}
+  to {top:0px;opacity:1;}
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 4; /* Sit on top */
+  padding-top: 5vw; 
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Display the modal when targeted */
+.modal:target {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* The modal's content */
+ .modal-content {
+   display: flex;
+   flex-direction: column;
+   margin-left: auto;
+   margin-right: auto;
+   padding-top: 0;
+   width: 80%;
+   height: 40%;
+   /* Add animation */
+   -webkit-animation-name: zoom;
+   -webkit-animation-duration: 0.6s;
+   animation-name: zoom;
+   animation-duration: 0.6s;
+}
+.caption{
+	color: white;
+	text-align: center;
+}
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The button used to close the modal */
+.closebtn {
+  display: flex;
+  justify-content: flex-end;
+  color: #f1f1f1;
+  font-size: 3rem;
+  font-weight: bold;
+  transition: 0.3s;
+  text-decoration:none;
+  padding-right: 3vw;
+}
+
+.closebtn:hover,
+.closebtn:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+.org-img:hover,.project-img-1:hover {
+  webkit-filter: blur(4px); /* Chrome, Safari, Opera */
+  filter: blur(4px);
+}
+.org-img{
+	border-radius: 15px;
+	border: 2px solid #16cc89;
+	box-shadow: 3px 5px 20px 10px #00ffbb;
+}
+.organization-name{
+	width: 70%;
+}
+.organization-name h5{
+	text-align: center;
+	color: #24344f;
+	font-size: 1.5rem;
+	font-family: "Istok Web", sans-serif;
+	margin: 0 1vw 1vw 0;
+	letter-spacing: 10px;
+	font-weight: 900;	
+}
+.organization-name p{
+	color: #324251;
+	font-family: "Istok Web",sans-serif;
+	font-size: 0.9rem;
+	margin: 0 8vw;
+	text-align: justify;
+	font-weight: 700;
+}
+.project-section{
+	margin:0;
+}
+.project-container{
+	margin: 2vw 2vw ;
+	display: flex;
+	flex-direction: column;
+}
+.project-section-title{
+	text-align: center;
+	background-color: #24344f;
+	font-size: 1.5rem;
+	font-family: "Playfair display", serif;
+	color: #c7dbd9;
+	letter-spacing: 6px;
+}
+.projects-list{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.project-1,.project-2{
+	margin: 5vw 7vw 5vw;
+	padding:2vw;
+	background-color: #16cc89;
+	border-radius: 15px;
+	box-shadow: 0px 3px 20px 5px #1a1c1b;
+	display: flex;
+	flex-direction: column;
+	height: auto;
+	align-items: center;
+	justify-content: center;
+}
+
+.project-img-1{
+    border-radius: 15px;
+	border: 2px solid #16cc89;
+	box-shadow: 3px 5px 20px 10px #00ffbb;
+
+}
+.project-img-2{
+    border-radius: 15px;
+	border: 2px solid #16cc89;
+	box-shadow: 3px 5px 20px 10px #00ffbb;
+	filter: blur(8px);
+    -webkit-filter: blur(8px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%; 
+}
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: 700;
+  border: 3px solid #ccd3e0;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(50%, -135%);
+  z-index: 2;
+  width: 150px;
+  height: 120px;
+  padding: 2px;
+  text-align: center;
+}
+
+.project-summary h5{
+	color: #24344f;
+	font-size: 1.5rem;
+	font-family: "Istok Web", sans-serif;
+	margin: 3vw 0 0;
+	font-weight: 700;
+	text-align: center;	
+}
+.project-summary p{
+	text-align: center;
+	color: #324251;
+	font-family: "Istok Web",sans-serif;
+	font-size: 0.9rem;
+	font-weight: 700;
+}
+.contact-section{
+	margin:0;
+}
+.contact-container{
+	margin: 2vw 2vw ;
+	display: flex;
+	flex-direction: column;
+}
+.contact-section-title{
+	text-align: center;
+	background-color: #24344f;
+	font-size: 1.5rem;
+	font-family: "Playfair display", serif;
+	color: #c7dbd9;
+	letter-spacing: 6px;
+}
+.contact-description{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.short-message p{
+	font-size: 1.2rem;
+	margin: 5vw 0 3vw;
+	color: #24344f;
+	font-family: "Playfair display", serif;
+	font-weight: 900;
+}
+.details p{
+	font-size: 0.8rem;
+	font-family: "Istok Web", sans-serif;
+	color: #24344f;
+	background-color: #16cc89;
+	border-radius: 10px;
+	box-shadow: 0px 1px 20px 3px #1a1c1b;
+	font-weight: 700;
+	text-align: center;
+}
+.contact-icons{
+	padding-top: 2vw;
+	display: flex;
+	justify-content: center;
+}
+
+.contact-icons div{
+	padding: 0 5px;
+}
+.contact-icons a{
+	text-decoration: none;
+	color:  #2a2d30;
+	font-size: 1.2rem;
+	font-weight: 700;
+}
+.footer{
+	background-color: #194c47;
+	color: white;
+	font-size: 0.9rem;
+	margin: 0;
+	text-align: center;
+	letter-spacing: 3px;
+}
+
+@media screen and (max-width: 705px) {
+
+	.navbar-logo {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		margin-left: auto;
+	}
+
+	 .navbar-logo a {
+		color: #c7dbd9;
+	}
+	.navbar-title h2{
+		font-size: 1rem;
+	}
+
+	 .nav {
+		display: none;
+	}
+
+	.navbar-responsive {
+		flex: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+	li {
+        border-right: none;
+    }
+    .personal-info-container{
+    	display: flex;
+    	flex-direction: column;
+    	align-items: center;
+    }
+    .profile-image{
+    	width: 100%;
+    	justify-content: center;
+    	padding-top: 10vw;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 1072px){
+    .projects-list{
+    	display: flex;
+    	flex-direction: column;
+    	justify-content: center;
+    	margin: 0 8vw;
+    }
+    .project-2{
+    	margin-top: 3vw;
+    }
+    .project-1{
+    	margin-bottom: 0;
+    }
+}	
+
+@media screen and (min-width: 705px) and (max-width: 942px){
+
+	.interests-4{
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@media screen and (min-width: 500px) and (max-width: 942px){
+
+	.internship-1,.internship-2{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin-left: 15vw;
+		margin-right: 15vw;
+	}
+	.organization-logo{
+		display: flex;
+		justify-content: center;
+	}
+	.organization-name p{
+		margin: 0 1vw;
+	}
+	.interest-area-title,.experience-title,.project-section-title,.contact-section-title h4{
+		font-size: 1.3rem;
+	}
+	.short-message p{
+		text-align: center;
+	}
+}	
+
+@media screen and (min-width: 500px) and (max-width: 705px){
+
+	.profile-description{
+		width:100%;
+	}
+	.paragraph-1{
+		margin: 0 2vw 2vw;
+	}
+}
+
+@media screen and (max-width: 500px){
+	.my-profile-image{
+		width: 50%;
+		margin: 10vw 0 0;
+	}
+	.profile-description{
+		width:100%;
+	}
+	.paragraph-1{
+		margin: 3vw 2vw 2vw;
+		font-size: 0.8rem; 
+	}
+	.heading-1{
+		font-size: 1.2rem;
+	}
+	.heading-2{
+		font-size: 0.9rem;
+		margin-top: 10px;
+	}
+	.interest-area-title,.experience-title,.project-section-title,.contact-section-title h4{
+		font-size: 1rem;
+	}
+	.interests{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	.logo{
+		width: 80%;
+		margin: 0 auto;
+	}
+	.interestName{
+		font-size: 1.2rem;
+	}
+	.internship-1,.internship-2{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin-left: 5vw;
+		margin-right: 5vw;
+	}
+	.internship-2{
+		margin-top: 5vw;
+	}
+	.organization-logo{
+		display: flex;
+		justify-content: center;
+		margin-right: 25vw;
+	}
+	.organization-name p {
+		margin: 0 2px 5px;
+		font-size: 0.7rem;
+	}
+	.organization-name h5{
+		font-size: 0.9rem;
+		margin-top: 5vw;
+	}
+	.org-img{
+		width: 200%;
+		height:auto;
+	}
+	.projects-list{
+    	display: flex;
+    	flex-direction: column;
+    	align-items: center;
+    	margin-left: 0;
+    	margin-right: 7vw; 
+    }
+    .project-2{
+    	width: 90%;
+    }
+    .project-1{
+    	margin-bottom: 0;
+    	width: 90%;
+    }
+    .project-img-1,.project-img-2{
+    	width: 70%;
+    	height: auto;
+    	margin-left: 10vw;
+    	margin-top: 2vw;
+    }
+    .project-summary p{
+    	text-align: justify-all;
+    	font-size: 0.7rem;
+    }
+    .project-summary h5{
+    	font-size: 1rem;
+    }
+    .bg-text{
+    	display: none;
+    }
+    .short-message p{
+    	font-size: 0.9rem;
+    	text-align: center;
+    }
+    .footer p{
+    	font-size: 0.7rem;
+    }	
+}
